@@ -18,126 +18,513 @@
             --transition: all 0.3s ease;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--white);
         }
-        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
-        h1, h2, h3, h4 { color: var(--secondary-color); margin-bottom: 15px; }
-        p { margin-bottom: 15px; }
-        a { text-decoration: none; color: var(--primary-color); transition: var(--transition); }
-        a:hover { color: var(--secondary-color); }
-        .btn {
-            display: inline-block; padding: 12px 25px; background-color: var(--primary-color);
-            color: var(--white); border-radius: 4px; font-weight: 600; transition: var(--transition);
-            border: none; cursor: pointer;
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
         }
-        .btn:hover { background-color: var(--secondary-color); color: var(--white); transform: translateY(-2px); }
-        .btn-small { padding: 8px 15px; font-size: 0.9rem; }
-        .section-title { font-size: 2.2rem; text-align: center; position: relative; padding-bottom: 15px; margin-bottom: 30px; }
-        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background-color: var(--primary-color); }
-        .section-subtitle { text-align: center; max-width: 700px; margin: 0 auto 40px; color: var(--text-color); }
+
+        h1, h2, h3, h4 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .btn-small {
+            padding: 8px 15px;
+            font-size: 0.9rem;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: var(--text-color);
+        }
 
         /* Header Styles */
-        header { background-color: var(--white); box-shadow: var(--shadow); position: fixed; width: 100%; top: 0; z-index: 1000; padding: 15px 0; }
-        .logo { display: flex; align-items: center; }
-        .logo img { height: 40px; margin-right: 10px; }
-        .logo h1 { font-size: 1.5rem; color: var(--primary-color); margin-bottom: 0; }
-        nav ul { display: flex; list-style: none; }
-        nav ul li { margin-left: 25px; }
-        nav ul li a { color: var(--dark-color); font-weight: 500; }
-        nav ul li a:hover { color: var(--primary-color); }
-        .mobile-menu { display: none; font-size: 1.5rem; cursor: pointer; }
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
 
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
-            height: 100vh; display: flex; align-items: center; text-align: center; color: var(--white); margin-top: 70px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 70px;
         }
-        .hero-content h2 { font-size: 3rem; margin-bottom: 20px; color: var(--white); }
-        .hero-content p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
 
         /* Services Section */
-        .services { padding: 80px 0; background-color: var(--light-color); }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .service-card { background-color: var(--white); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); text-align: center; transition: var(--transition); }
-        .service-card:hover { transform: translateY(-10px); }
-        .service-icon { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px; }
-        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+        .services {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
 
         /* About Section */
-        .about { padding: 80px 0; background-color: var(--white); }
-        .about .container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-        .about-image img { width: 100%; border-radius: 8px; box-shadow: var(--shadow); }
-        .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
-        .feature { display: flex; align-items: center; }
-        .feature i { color: var(--primary-color); margin-right: 10px; font-size: 1.2rem; }
+        .about {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .about .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+        }
+
+        .feature i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
 
         /* Reviews Section */
-        .reviews { padding: 80px 0; background-color: var(--light-color); }
-        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
-        .review-card { background-color: var(--white); padding: 25px; border-radius: 8px; box-shadow: var(--shadow); }
-        .review-header { display: flex; align-items: center; margin-bottom: 15px; }
-        .review-header img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin-right: 15px; }
-        .review-info h4 { margin-bottom: 5px; }
-        .stars { color: var(--accent-color); }
-        .review-cta { text-align: center; margin-top: 40px; }
-        .review-cta p { font-size: 1.2rem; margin-bottom: 20px; }
+        .reviews {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .review-card {
+            background-color: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .review-header img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+
+        .review-info h4 {
+            margin-bottom: 5px;
+        }
+
+        .stars {
+            color: var(--accent-color);
+        }
+
+        .review-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .review-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
 
         /* Contact Section */
-        .contact { padding: 80px 0; background-color: var(--white); }
-        .contact .container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
-        .contact-form { background-color: var(--light-color); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); }
-        .form-group { margin-bottom: 20px; }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; font-size: 1rem;
+        .contact {
+            padding: 80px 0;
+            background-color: var(--white);
         }
-        .form-group textarea { resize: vertical; }
-        .contact-info { padding: 20px; }
-        .info-item { display: flex; margin-bottom: 20px; }
-        .info-item i { color: var(--primary-color); font-size: 1.2rem; margin-right: 15px; margin-top: 5px; }
-        .social-links { display: flex; margin-top: 30px; }
+
+        .contact .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-form {
+            background-color: var(--light-color);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .contact-info {
+            padding: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .info-item i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 30px;
+        }
+
         .social-links a {
-            display: flex; align-items: center; justify-content: center; width: 40px; height: 40px;
-            background-color: var(--primary-color); color: var(--white); border-radius: 50%; margin-right: 15px; transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            margin-right: 15px;
+            transition: var(--transition);
         }
-        .social-links a:hover { background-color: var(--secondary-color); transform: translateY(-3px); }
+
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
 
         /* Footer */
-        footer { background-color: var(--secondary-color); color: var(--white); padding: 60px 0 0; }
-        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-logo { margin-bottom: 20px; }
-        .footer-logo img { height: 50px; margin-bottom: 15px; }
-        .footer-logo h3 { color: var(--white); margin-bottom: 10px; }
-        .footer-logo p { color: rgba(255, 255, 255, 0.7); }
-        .footer-links h4, .footer-services h4 { color: var(--white); margin-bottom: 20px; font-size: 1.2rem; }
-        .footer-links ul, .footer-services ul { list-style: none; }
-        .footer-links li, .footer-services li { margin-bottom: 10px; }
-        .footer-links a, .footer-services a { color: rgba(255, 255, 255, 0.7); transition: var(--transition); }
-        .footer-links a:hover, .footer-services a:hover { color: var(--white); padding-left: 5px; }
-        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 20px 0; text-align: center; }
-        .legal-links { margin-top: 15px; }
-        .legal-links a { color: rgba(255, 255, 255, 0.7); margin: 0 10px; }
-        .legal-links a:hover { color: var(--white); }
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 60px 0 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo h3 {
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .footer-logo p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-links h4,
+        .footer-services h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-links ul,
+        .footer-services ul {
+            list-style: none;
+        }
+
+        .footer-links li,
+        .footer-services li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a,
+        .footer-services a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover,
+        .footer-services a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .legal-links {
+            margin-top: 15px;
+        }
+
+        .legal-links a {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0 10px;
+        }
+
+        .legal-links a:hover {
+            color: var(--white);
+        }
 
         /* Responsive Styles */
-        @media (max-width: 992px) { .about .container, .contact .container { grid-template-columns: 1fr; } .about-image { order: -1; } }
-        @media (max-width: 768px) {
-            nav ul { display: none; position: absolute; top: 70px; left: 0; width: 100%; background-color: var(--white); flex-direction: column; padding: 20px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
-            nav ul.show { display: flex; }
-            nav ul li { margin: 10px 0; }
-            .mobile-menu { display: block; }
-            .hero-content h2 { font-size: 2.2rem; }
-            .section-title { font-size: 1.8rem; }
+        @media (max-width: 992px) {
+            .about .container,
+            .contact .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                order: -1;
+            }
         }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero-content h2 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
         @media (max-width: 576px) {
-            .hero-content h2 { font-size: 1.8rem; }
-            .hero-content p { font-size: 1rem; }
-            .services-grid { grid-template-columns: 1fr; }
-            .about-features { grid-template-columns: 1fr; }
+            .hero-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-features {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -183,39 +570,57 @@
         <div class="container">
             <h2 class="section-title">Our Services</h2>
             <p class="section-subtitle">We offer a wide range of cleaning services to meet your needs</p>
+            
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-home"></i></div>
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
                     <h3>Residential Cleaning</h3>
                     <p>Thorough cleaning of your home including dusting, vacuuming, mopping, and sanitizing all surfaces.</p>
                     <a href="#contact" class="btn-small">Book Now</a>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-building"></i></div>
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
                     <h3>Commercial Cleaning</h3>
                     <p>Professional cleaning services for offices, retail spaces, and other commercial properties.</p>
                     <a href="#contact" class="btn-small">Book Now</a>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-broom"></i></div>
+                    <div class="service-icon">
+                        <i class="fas fa-broom"></i>
+                    </div>
                     <h3>Deep Cleaning</h3>
                     <p>Intensive cleaning that reaches every corner, perfect for move-in/move-out or seasonal cleaning.</p>
                     <a href="#contact" class="btn-small">Book Now</a>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-couch"></i></div>
+                    <div class="service-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
                     <h3>Carpet Cleaning</h3>
                     <p>Professional steam cleaning to remove stains, odors, and allergens from your carpets and rugs.</p>
                     <a href="#contact" class="btn-small">Book Now</a>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-window-restore"></i></div>
+                    <div class="service-icon">
+                        <i class="fas fa-window-restore"></i>
+                    </div>
                     <h3>Window Cleaning</h3>
                     <p>Streak-free window cleaning for both interior and exterior surfaces.</p>
                     <a href="#contact" class="btn-small">Book Now</a>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-hand-sparkles"></i></div>
+                    <div class="service-icon">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
                     <h3>Specialty Cleaning</h3>
                     <p>Customized cleaning solutions for unique spaces and special requirements.</p>
                     <a href="#contact" class="btn-small">Book Now</a>
@@ -232,9 +637,18 @@
                 <p>Founded in 2015, Dr Shine has been providing top-quality cleaning services to residential and commercial clients throughout the area. Our team of trained professionals is committed to delivering exceptional results with every cleaning.</p>
                 <p>We use eco-friendly cleaning products that are safe for your family, pets, and the environment, while still being highly effective at removing dirt, grime, and bacteria.</p>
                 <div class="about-features">
-                    <div class="feature"><i class="fas fa-check-circle"></i><span>Fully Insured</span></div>
-                    <div class="feature"><i class="fas fa-check-circle"></i><span>Background Checked Staff</span></div>
-                    <div class="feature"><i class="fas fa-check-circle"></i><span>100% Satisfaction Guarantee</span></div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Fully Insured</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Background Checked Staff</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>100% Satisfaction Guarantee</span>
+                    </div>
                 </div>
             </div>
             <div class="about-image">
@@ -248,6 +662,7 @@
         <div class="container">
             <h2 class="section-title">What Our Clients Say</h2>
             <p class="section-subtitle">Don't just take our word for it - hear from our satisfied customers</p>
+            
             <div class="reviews-grid">
                 <div class="review-card">
                     <div class="review-header">
@@ -255,37 +670,52 @@
                         <div class="review-info">
                             <h4>Sarah Johnson</h4>
                             <div class="stars">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
                         </div>
                     </div>
                     <p>"Dr Shine transformed my home! After their deep cleaning service, it looked and smelled better than when we first moved in. The team was professional, punctual, and thorough. Highly recommend!"</p>
                 </div>
+                
                 <div class="review-card">
                     <div class="review-header">
                         <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
                         <div class="review-info">
                             <h4>Michael Rodriguez</h4>
                             <div class="stars">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
                         </div>
                     </div>
                     <p>"We use Dr Shine for our office cleaning and couldn't be happier. They're reliable, detail-oriented, and our employees have noticed the difference. The carpets look brand new after their cleaning!"</p>
                 </div>
+                
                 <div class="review-card">
                     <div class="review-header">
                         <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client">
                         <div class="review-info">
                             <h4>Emily Chen</h4>
                             <div class="stars">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
                             </div>
                         </div>
                     </div>
                     <p>"As a busy mom, Dr Shine has been a lifesaver. Their bi-weekly cleaning service keeps my home spotless and gives me more time with my kids. The cleaners are always friendly and respectful of our space."</p>
                 </div>
             </div>
+            
             <div class="review-cta">
                 <p>Ready to experience the Dr Shine difference?</p>
                 <a href="#contact" class="btn">Book Your Cleaning Today</a>
@@ -298,9 +728,9 @@
         <div class="container">
             <div class="contact-form">
                 <h2 class="section-title">Get Your Free Quote</h2>
-                <!-- MODIFIED: removed inline onsubmit, added id, left action/method -->
-                <form id="quoteForm" action="https://formspree.io/f/xgvlyarr" method="post">
-                    <!-- Optional: sets email subject you receive -->
+                <!-- FIXED: no inline onsubmit; added id for JS; same endpoint -->
+                <form id="quoteForm" action="https://formspree.io/f/xgvlyarr" method="post" target="_self">
+                    <!-- Optional: better subject in Formspree email -->
                     <input type="hidden" name="_subject" value="New quote request from drshineltd.com">
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -326,7 +756,7 @@
                         <textarea id="message" name="message" placeholder="Tell us about your cleaning needs" rows="4"></textarea>
                     </div>
                     <button type="submit" class="btn">Request Quote</button>
-                    <!-- NEW: on-page status message so user never leaves the page -->
+                    <!-- NEW: inline status so the page doesn't change -->
                     <p id="form-status" aria-live="polite" style="margin-top:10px;"></p>
                 </form>
             </div>
@@ -386,4 +816,75 @@
                         <li><a href="#services">Window Cleaning</a></li>
                     </ul>
                 </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Dr Shine Cleaning Services. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (document.getElementById('navMenu').classList.contains('show')) {
+                    document.getElementById('navMenu').classList.remove('show');
+                }
+            });
+        });
+
+        // Sticky header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
+
+    <!-- NEW: background submit to Formspree so the page never changes -->
+    <script>
+    (function () {
+        const form = document.getElementById('quoteForm');
+        const status = document.getElementById('form-status');
+
+        if (!form) return;
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault(); // keep user on this page
+            if (status) status.textContent = 'Sending...';
+
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' } // prevents redirect; Formspree returns JSON
+                });
+
+                if (res.ok) {
+                    if (status) status.textContent = "Thanks! We’ll contact you shortly.";
+                    form.reset();
+                } else {
+                    const data = await res.json().catch(() => ({}));
+                    const msg = (data.errors && data.errors.map(er => er.message).join(', ')) ||
+                                "Oops, something went wrong. Please try again.";
+                    if (status) status.textContent = msg;
+                }
+            } catch (err) {
+                if (status) status.textContent = "Network error. Please try again.";
+            }
+        });
+    })();
+    </script>
+</body>
+
+</html>
